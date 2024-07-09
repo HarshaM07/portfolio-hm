@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HM Portfolio</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./all.min.css" />
+  </head>
+  <body>
+    <nav>
+      <h2 id="logo">Harsha M</h2>
+      <ul class="navigation-items">
+        <li class="navigation-item"><a href="#about-me">About Me</a></li>
+        <li class="navigation-item"><a href="#projects">Projects</a></li>
+        <li class="navigation-item"><a href="#skills">Skills</a></li>
+        <li class="navigation-item"><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="about-me">
+        <div class="about-me-container">
+          <div class="about-me-text-container">
+            <h2>About Me</h2>
+            <p>
+              "I recently completed a comprehensive Java Full Stack Developer
+              course, gaining proficiency in both front-end and back-end
+              technologies. As a recent graduate of computer science, I am now
+              equipped to design and implement end-to-end solutions for web
+              applications, showcasing expertise in Java, Spring, HTML, CSS, and
+              JavaScript."
+            </p>
+            <p>
+              "Adaptable Software Engineer | Full Stack Developer | Back-End
+              Specialist | Skilled in Java, Spring, HTML, CSS, JavaScript, and
+              Database Management | Agile Enthusiast | Git | Front-End Projects:
+              Developed engaging user interfaces using HTML, CSS, and JavaScript
+              | ML Project: Implemented machine learning algorithms for Tobacco
+              plant region extraction and segmentation using CNN and watershed
+              algorithm.
+            </p>
+
+            <!-- <p>
+              In my free time I like to read about scientific developments,
+              mathematics, and computational mathematics. I also like to take my
+              chances of winning big.  -->
+            <!-- </p> -->
+             <!-- <p>
+              Fun fact! I've been programing for
+              <span id="time-container">0</span> seconds!
+            </p> -->
+          </div>
+          <img src="hm.jpg" alt="A photo of Harsha M" class="portrait" />
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <details class="project">
+          <summary class="project-title">
+            <h3>
+              Tobacco plant region extraction and segmentation using CNN and
+              Watershed algorithm
+            </h3>
+          </summary>
+          <img
+            src="tobacco plant.jpeg"
+            alt="Tobacco plant image"
+            class="project-image"
+          />
+          <p class="project-description">
+            This project focuses on creating an automated image processing
+            system that utilizes Convolutional Neural Networks (CNNs) and the
+            Watershed algorithm. The system is designed to determine whether a
+            plant is a tobacco plant or not, and further classify identified
+            tobacco plants into distinct species. This technology aims to
+            streamline crop identification and species categorization, providing
+            valuable insights for farmers and researchers in precision
+            agriculture.
+          </p>
+        </details>
+        <details class="project">
+          <summary class="project-title">
+            <h3>Bar Graph Animation</h3>
+          </summary>
+          <img
+            src="started animation.png"
+            alt="Bar graph animation"
+            class="project-image"
+          />
+          <p class="project-description">
+            The Bar Graph animation using HTML,CSS,Javascript
+          </p>
+        </details>
+        <details class="project">
+          <summary class="project-title">
+            <h3>Book Store Management System</h3>
+          </summary>
+          <img
+            src="https://www.sourcecodester.com/sites/default/files/images/oretnom23/ci-bsms-login.png"
+            alt="Book Store Management System"
+            class="project-image"
+          />
+          <p class="project-description">
+            I have successfully concluded the development of a Bookstore
+            Management System, utilizing Spring Boot and SQL for the backend,
+            coupled with an HTML frontend. The project encompasses efficient
+            inventory management, available books, and customer relations,
+            providing a comprehensive solution tailored to streamline bookstore
+            operations.
+          </p>
+        </details>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <div id="skills-container">
+          <i class="fab fa-html5"></i>
+          <i class="fab fa-css3-alt"></i>
+          <i class="fab fa-js"></i>
+          <i class="fab fa-react"></i>
+          <!-- <i class="fab fa-aws"></i> -->
+          <!-- <i class="fab fa-sketch"></i> -->
+          <i class="fab fa-figma"></i>
+          <i class="fab fa-git"></i>
+          <i class="fab fa-chrome"></i>
+          <i class="fas fa-terminal"></i>
+          <i class="fas fa-universal-access"></i>
+          <i class="fab fa-npm"></i>
+          <i class="fab fa-node"></i>
+          <i class="fab fa-github"></i>
+        </div>
+      </section>
+    </main>
+
+    <footer>Made with <span class="heart">♥</span> India</footer>
+  </body>
+  <script>
+    const timeContainer = document.getElementById("time-container");
+    const BIRTH_DAY = "12-10-1815";
+    const BIRTH_DAY_DATE = new Date(BIRTH_DAY);
+    const intlNumberFormatter = new Intl.NumberFormat("en-US");
+
+    setInterval(() => {
+      const now = new Date();
+      const difference = Math.floor(
+        (now.getTime() - BIRTH_DAY_DATE.getTime()) / 1000
+      );
+
+      timeContainer.innerText = intlNumberFormatter.format(difference);
+    }, 1000);
+  </script>
+</html>
